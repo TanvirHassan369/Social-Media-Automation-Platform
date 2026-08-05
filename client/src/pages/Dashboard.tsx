@@ -26,10 +26,12 @@ const Dashboard = () => {
         { data: dummyActivityData }]
         const posts = postRes.data;
         setStats({
-          scheduled: posts.filter((p: any) => p.status === 'schedule').length,
-          published: posts.filter((p: any) => p.status === 'published').length,
-          connectAccounts: accountsRes.data.filter((a: any) => a.status === 'connected').length,
-        })
+          scheduled: posts.filter((p: any) => p.status === "scheduled").length,
+          published: posts.filter((p: any) => p.status === "published").length,
+          connectAccounts: accountsRes.data.filter(
+            (a: any) => a.status === "connected",
+          ).length,
+        });
         setActivities(activityRes.data)
       } catch (erro: any) {
         console.error("Error Fetching dashboard data", error)
