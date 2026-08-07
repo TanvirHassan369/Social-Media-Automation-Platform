@@ -3,7 +3,7 @@ import { PLATFORMS } from "../assets/assets";
 
 interface PlatformPickerModelProps {
   connectedIds: string[];
-  connecting: string[] | null;
+  connecting: string | null;
   onClose: () => void;
   onConnect: (platformId: string) => void;
 }

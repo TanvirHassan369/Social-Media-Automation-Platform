@@ -124,7 +124,7 @@ const Dashboard = () => {
                     <span className="text-xs px-2 py-0.5 rounded-full bg-zinc-100 text-zinc-600">
                       Published
                     </span>
-                    <span className="tsxt-xs text-slate-400 shirnk-0">
+                    <span className="text-xs text-slate-400 shirnk-0">
                       {new Date(activity.createdAt).toLocaleString()}
                     </span>
                   </div>
