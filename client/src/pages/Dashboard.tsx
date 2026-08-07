@@ -33,7 +33,7 @@ const Dashboard = () => {
           ).length,
         });
         setActivities(activityRes.data)
-      } catch (erro: any) {
+      } catch (error: any) {
         console.error("Error Fetching dashboard data", error)
       }
     };
@@ -73,7 +73,7 @@ const Dashboard = () => {
         {statCards.map((card) => (
           <div
             key={card.label}
-            className="mt-4 bd-white hover: bd-re-50 relative border border-red-200 rounded-2xl p-5 hover:bg-red-200 transition-all"
+            className="relative mt-4 rounded-2xl border border-red-200 bg-white p-5 transition-all hover:bg-red-200"
           >
             <div className="flex items-center justify-between mb-4">
               <div className="text-3xl font-medium text-slate-800 tabular-nums">
@@ -121,8 +121,12 @@ const Dashboard = () => {
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-2 mb-1">
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-zinc-100 text-zinc-600">Published</span>
-                    <span className="tsxt-xs text-slate-400 shirnk-0">{new Date(activity.createdAt).toLocaleString()}</span>
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-zinc-100 text-zinc-600">
+                      Published
+                    </span>
+                    <span className="text-xs text-slate-400 shirnk-0">
+                      {new Date(activity.createdAt).toLocaleString()}
+                    </span>
                   </div>
                   <p className="text-sm text-slate-600">
                     {activity.description}
