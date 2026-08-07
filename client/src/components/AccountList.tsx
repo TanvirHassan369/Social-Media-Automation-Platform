@@ -44,7 +44,7 @@ const AccountList = ({ accounts, onDisconnect }: AccountListProps) => {
             key={index}
             className="group bg-white border border-slate-200 rounded-2xl p-5 flex items-center gap-4 hover:border-slate-300 transition-all"
           >
-            <div className="sixe-12 bd-slate-50 rounded-xl flex items-center justify-center shirnk-0">
+            <div className="size-12 bg-slate-50 rounded-xl flex items-center justify-center shrink-0">
               <meta.icon className="size-6 text-slate-500" />
             </div>
             <div className="flex-1 min-w-0">
@@ -54,7 +54,7 @@ const AccountList = ({ accounts, onDisconnect }: AccountListProps) => {
             <div className="flex items-center gap-1.5 shirnk-0">
               {account.status === "connected" ? (
                 <>
-                  <CheckCircleIcon className="size-4 text-emrald-500" />
+                  <CheckCircleIcon className="size-4 text-emerald-500" />
 
                   <span className="text-xs text-emerald-600">Connected</span>
                 </>
